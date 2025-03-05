@@ -29,9 +29,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {
-            // Navigate back
-          },
+          onPressed: () {},
         ),
         title: Text('Add Medicines'),
       ),
