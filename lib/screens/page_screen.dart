@@ -1,3 +1,4 @@
+import 'package:adhicine_assignment/report_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../auth/sign_in_screen.dart';
@@ -36,7 +37,7 @@ class _PageScreenState extends State<PageScreen> {
         physics: const NeverScrollableScrollPhysics(), // Disable swipe
         children: const [
           Homescreen(),
-          SignInScreen(),
+          ReportScreen(),
         ],
       ),
       floatingActionButton: Container(
