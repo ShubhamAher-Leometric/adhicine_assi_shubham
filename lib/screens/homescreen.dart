@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/netwoek_popup.dart';
+
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
@@ -27,9 +29,19 @@ class _HomescreenState extends State<Homescreen> {
                   ],
                 ),
                 Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
-                  child: Icon(Icons.medical_services,size: 35,color: Colors.blue.shade700,),
+                GestureDetector(
+                  onTap: (){
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return DeviceNotConnectedPopup();
+                      },
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10.0),
+                    child: Icon(Icons.medical_services,size: 35,color: Colors.blue.shade700,),
+                  ),
                 ),
                 SizedBox(width: 10,),
                 Padding(
@@ -164,7 +176,6 @@ class _HomescreenState extends State<Homescreen> {
     required Color iconBgColor,
 
   }) {
-    // Determine the status icon based on the status text
     IconData statusIcon;
     switch (status) {
       case 'Taken':
@@ -207,9 +218,9 @@ class _HomescreenState extends State<Homescreen> {
                 Text(medicineName, style: TextStyle(fontWeight: FontWeight.bold)),
                 Row(
                   children: [
-                    Text('$instruction', style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 14)),
+                    Text('$instruction', style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 12)),
                     Spacer(),
-                    Text('$day', style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 14)),
+                    Text('$day', style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 12)),
                   ],
                 ),
               ],
