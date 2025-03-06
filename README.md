@@ -42,7 +42,7 @@ If you want to build the APK from the source code:
 
 Clone the repository:
 
-git clone https://github.com/your-repo/flutter-app.git
+git clone https://github.com/ShubhamAher-Leometric/adhicine_assi_shubham.git
 
 Navigate to the project folder:
 
