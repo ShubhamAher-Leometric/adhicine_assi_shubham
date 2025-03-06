@@ -34,7 +34,7 @@ class _PageScreenState extends State<PageScreen> {
     return Scaffold(
       body: PageView(
         controller: _pageController,
-        physics: const NeverScrollableScrollPhysics(), // Disable swipe
+        physics: const NeverScrollableScrollPhysics(),
         children: const [
           Homescreen(),
           ReportScreen(),
@@ -55,7 +55,7 @@ class _PageScreenState extends State<PageScreen> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const AddScreen()),
+              MaterialPageRoute(builder: (context) =>AddMedicineScreen()),
             );
           },
           backgroundColor: Colors.black,
@@ -65,6 +65,7 @@ class _PageScreenState extends State<PageScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
+        shadowColor: Colors.grey,
         shape: const CircularNotchedRectangle(),
         notchMargin: 4.0,
         color: Colors.white,
@@ -75,12 +76,12 @@ class _PageScreenState extends State<PageScreen> {
             GestureDetector(
               onTap: () => _onItemTapped(0),
               child: Column(
-                mainAxisSize: MainAxisSize.min, // Ensures tight layout
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
                     Icons.home_filled,
                     color: _selectedIndex == 0 ? Colors.blue.shade700 : Colors.grey,
-                    size: 30, // Reduce icon size slightly
+                    size: 30,
                   ),
                 ],
               ),
