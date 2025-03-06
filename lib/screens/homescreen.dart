@@ -1,3 +1,4 @@
+import 'package:adhicine_assignment/screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +47,11 @@ class _HomescreenState extends State<Homescreen> {
                 SizedBox(width: 10,),
                 Padding(
                   padding: const EdgeInsets.only(top: 10.0),
-                  child: Image.asset('assets/user.png',height: 50,width: 50,),
+                  child: InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> ProfileScreen()));
+                      },
+                      child: Image.asset('assets/user.png',height: 50,width: 50,)),
                 ),
               ],
             ),
